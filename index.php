@@ -1,22 +1,24 @@
+<!DOCTYPE html>
 <!--
-	作者：offline
-	时间：2016-01-08
-	描述：
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
 -->
-<!DOCTYPE >
 <html>
-	<head>
-		<title>信息传输</title>
-		</head>
-	<body>
-		<form action="upload.php" method="post">
-			
-			<label>username</label>
-			<input type="text" id="username" value="" name="username"/><br />
-			<label>password</label>
-			<input type="text" id="password" value="" name="password"/><br />
-			<input type="submit" value="sumit"/>
-		
-		</form>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<?php
+include('jm.php');
+//$_SESSION["username"]='admin';
+//$_SESSION["password"]='admin123';
+//$_SESSION['code'] =mc::encrypt(session_id(), $_SESSION["username"],$_SESSION["password"]);
+if(mc::checker()){
+    header("Location:a.php");
+}
+?>
+
+</body>
 </html>
